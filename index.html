@@ -26,17 +26,17 @@
     <div id="map"></div>
     <script>
       function initMap() {
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 4,
-          center: { lat: 49.496675, lng: -102.65625 }
+        const map = new google.maps.Map(document.getElementById("map"), {
+          zoom: 1,
+          center: { lat: 41.876, lng: -87.624 },
         });
-
         const ctaLayer = new google.maps.KmlLayer({
-          url: "https://googlearchive.github.io/js-v2-samples/ggeoxml/cta.kml",
+          url: "https://raw.githubusercontent.com/pangolinlasersystems/google-maps/main/assets/map.kml",
           map: map
         });
-        window.initMap = initMap;
       }
+
+      window.initMap = initMap;
     </script>
     <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAZPrmmAYSMRVGv_Cy-6KG1ggVVDIhDkiA&callback=initMap">
     </script>
